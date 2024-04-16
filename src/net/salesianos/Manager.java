@@ -2,19 +2,13 @@ package net.salesianos;
 
 import java.util.ArrayList;
 
+import net.salesianos.utils.Window;
+
 public class Manager {
   private static ArrayList<Restaurant> restaurants;
 
   public Manager() {
     Manager.restaurants = new ArrayList<>();
-  }
-
-  public static ArrayList<Restaurant> getRestaurants() {
-    return restaurants;
-  }
-
-  public static void setRestaurants(ArrayList<Restaurant> restaurants) {
-    Manager.restaurants = restaurants;
   }
 
   public static void addRestaurant(Restaurant r) {
@@ -30,42 +24,40 @@ public class Manager {
   }
 
   public static void editRestaurant(int index) {
-    // Show restaurant data on screen
-    int option = 0;
+    Window.showMessage(Manager.restaurants.get(index).toString());
+    String option = Window.askString("que fue mi niño, que quieres editar?");
     switch (option) {
-      case 1:
-        Manager.restaurants.get(index).setName(null);
+      case "1":
+        Manager.restaurants.get(index).setName(Window.askString("Introduzca el nuevo nombre"));
         break;
-      case 2:
-        Manager.restaurants.get(index).setLocation(null);
+      case "2":
+        Manager.restaurants.get(index).setLocation(Window.askString("Introduzca la nueva localizacion"));
         break;
-      case 3:
-        Manager.restaurants.get(index).setOpeningHours(null);
+      case "3":
+        Manager.restaurants.get(index).setOpeningHours(Window.askString("Introduzca el horario"));
         break;
-      case 4:
-        int rate = 5;
-        Manager.restaurants.get(index).setRate(rate);
+      case "4":
+        Manager.restaurants.get(index).setRate(Window.askFloat("Introduzca la nueva calificación"));
         break;
     }
   }
   
   public static void editRestaurant(Restaurant restaurant) {
-    // Show restaurant data on screen
+    Window.showMessage(restaurant.toString());
     int index = Manager.restaurants.indexOf(restaurant);
-    int option = 0;
+    String option = Window.askString("que fue mi niño, que quieres editar?");
     switch (option) {
-      case 1:
-        Manager.restaurants.get(index).setName(null);
+      case "1":
+        Manager.restaurants.get(index).setName(Window.askString("Introduzca el nuevo nombre"));
         break;
-      case 2:
-        Manager.restaurants.get(index).setLocation(null);
+      case "2":
+        Manager.restaurants.get(index).setLocation(Window.askString("Introduzca la nueva localizacion"));
         break;
-      case 3:
-        Manager.restaurants.get(index).setOpeningHours(null);
+      case "3":
+        Manager.restaurants.get(index).setOpeningHours(Window.askString("Introduzca el horario"));
         break;
-      case 4:
-        int rate = 5;
-        Manager.restaurants.get(index).setRate(rate);
+      case "4":
+        Manager.restaurants.get(index).setRate(Window.askFloat("Introduzca la nueva calificación"));
         break;
     }
   }
@@ -75,7 +67,7 @@ public class Manager {
     for (Restaurant restaurant : Manager.restaurants) {
       message += restaurant.toString(); 
     }
-    // show message on screen
+    Window.showMessage(message);
   }
   
 }

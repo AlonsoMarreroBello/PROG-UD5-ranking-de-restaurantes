@@ -4,7 +4,7 @@ public class Restaurant {
   private String name;
   private String location;
   private String openingHours;
-  private int rate;
+  private float rate;
 
   public Restaurant(String name, String location, String openingHours, int rate) {
     this.name = name;
@@ -31,10 +31,10 @@ public class Restaurant {
   public void setOpeningHours(String openingHours) {
     this.openingHours = openingHours;
   }
-  public int getRate() {
+  public float getRate() {
     return rate;
   }
-  public void setRate(int rate) {
+  public void setRate(float rate) {
     this.rate = rate;
   }
 

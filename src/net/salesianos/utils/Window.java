@@ -11,8 +11,8 @@ public class Window {
     return JOptionPane.showInputDialog(message);
   }
   
-  public static Integer askInteger(String message) {
-    int number = Integer.parseInt(JOptionPane.showInputDialog(message));
+  public static float askFloat(String message) {
+    float number = Float.parseFloat(JOptionPane.showInputDialog(message));
     return number;
   }
 
