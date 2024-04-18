@@ -4,13 +4,13 @@ public class Restaurant {
   private String name;
   private String location;
   private String openingHours;
-  private float rate;
+  private float rating;
 
-  public Restaurant(String name, String location, String openingHours, int rate) {
+  public Restaurant(String name, String location, String openingHours, int rating) {
     this.name = name;
     this.location = location;
     this.openingHours = openingHours;
-    this.rate = rate;
+    this.rating = rating;
   }
 
   public String getName() {
@@ -31,11 +31,20 @@ public class Restaurant {
   public void setOpeningHours(String openingHours) {
     this.openingHours = openingHours;
   }
-  public float getRate() {
-    return rate;
+  public float getrating() {
+    return rating;
   }
-  public void setRate(float rate) {
-    this.rate = rate;
+  public void setrating(float rating) {
+    this.rating = rating;
+  }
+
+  @Override
+  public String toString() {
+    return "\nRestaurante: \n" + 
+        "Nombre = " + name + '\n' +
+        "Ubicacion = " + location + '\n' +
+        "Horas = " + openingHours + '\n' +
+        "Calificación = " + rating;
   }
 
   

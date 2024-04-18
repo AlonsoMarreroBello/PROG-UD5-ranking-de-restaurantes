@@ -37,7 +37,7 @@ public class Manager {
         Manager.restaurants.get(index).setOpeningHours(Window.askString("Introduzca el horario"));
         break;
       case "4":
-        Manager.restaurants.get(index).setRate(Window.askFloat("Introduzca la nueva calificación"));
+        Manager.restaurants.get(index).setrating(Window.askFloat("Introduzca la nueva calificación"));
         break;
     }
   }
@@ -57,7 +57,7 @@ public class Manager {
         Manager.restaurants.get(index).setOpeningHours(Window.askString("Introduzca el horario"));
         break;
       case "4":
-        Manager.restaurants.get(index).setRate(Window.askFloat("Introduzca la nueva calificación"));
+        Manager.restaurants.get(index).setrating(Window.askFloat("Introduzca la nueva calificación"));
         break;
     }
   }
