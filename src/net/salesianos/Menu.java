@@ -15,15 +15,25 @@ public class Menu {
       String ratingStr = Window.askString("Enter the rating of the restaurant:");
       if (Validation.isNumber(ratingStr)) {
         rating = Float.parseFloat(ratingStr);
-        break;
+        if (rating >= 0 && rating <= 10) {
+          break;
+        } else {
+          Window.showMessage("Rating must be a number between 0 and 10.");
+        }
       } else {
-        JOptionPane.showMessageDialog(null, "Rating must be a number.");
+        Window.showMessage("Rating must be a number.");
       }
     } while (true);
 
-    Restaurant restaurant = new Restaurant(name, location, hours, rating);
-    Manager.addRestaurant(restaurant);
-    Window.showMessage("Restaurant added successfully.");
+    if (name!=null && location!=null && hours!=null) {
+      Restaurant restaurant = new Restaurant(name, location, hours, rating);
+      Manager.addRestaurant(restaurant);
+      Window.showMessage("Restaurant added successfully.");
+    } else {
+      Window.showMessage("You have to put all the information to create a restaurant");
+    }
+
+    
   }
 
   public static void editRestaurant() {

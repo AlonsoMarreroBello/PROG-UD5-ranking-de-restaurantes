@@ -7,7 +7,7 @@ public class Validation {
     try {
       Float.parseFloat(input);
       return true;
-    } catch (NumberFormatException e) {
+    } catch (NullPointerException | NumberFormatException e) {
       return false;
     }
   }
