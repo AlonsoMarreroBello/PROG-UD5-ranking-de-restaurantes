@@ -1,40 +1,49 @@
 package net.salesianos;
 
-public class Restaurant {
+class Restaurant {
   private String name;
   private String location;
-  private String openingHours;
+  private String hours;
   private float rating;
 
-  public Restaurant(String name, String location, String openingHours, int rating) {
+  public Restaurant(String name, String location, String hours, float rating) {
     this.name = name;
     this.location = location;
-    this.openingHours = openingHours;
+    this.hours = hours;
     this.rating = rating;
   }
+
+  // Getters and setters
 
   public String getName() {
     return name;
   }
+
   public void setName(String name) {
     this.name = name;
   }
+
   public String getLocation() {
     return location;
   }
+
   public void setLocation(String location) {
     this.location = location;
   }
-  public String getOpeningHours() {
-    return openingHours;
+
+  public String getHours() {
+    return hours;
   }
-  public void setOpeningHours(String openingHours) {
-    this.openingHours = openingHours;
+
+  public void setHours(String hours) {
+    this.hours = hours;
   }
-  public float getrating() {
+
+  public float getRating() {
     return rating;
   }
-  public void setrating(float rating) {
+
+  public void setRating(float rating) {
     this.rating = rating;
   }
 
@@ -43,9 +52,8 @@ public class Restaurant {
     return "\nRestaurante: \n" + 
         "Nombre = " + name + '\n' +
         "Ubicacion = " + location + '\n' +
-        "Horas = " + openingHours + '\n' +
+        "Horas = " + hours + '\n' +
         "Calificación = " + rating;
   }
-
-  
 }
+

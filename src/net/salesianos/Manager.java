@@ -34,10 +34,10 @@ public class Manager {
         Manager.restaurants.get(index).setLocation(Window.askString("Introduzca la nueva localizacion"));
         break;
       case "3":
-        Manager.restaurants.get(index).setOpeningHours(Window.askString("Introduzca el horario"));
+        Manager.restaurants.get(index).setHours(Window.askString("Introduzca el horario"));
         break;
       case "4":
-        Manager.restaurants.get(index).setrating(Window.askFloat("Introduzca la nueva calificación"));
+        Manager.restaurants.get(index).setRating(Window.askFloat("Introduzca la nueva calificación"));
         break;
     }
   }
@@ -54,10 +54,10 @@ public class Manager {
         Manager.restaurants.get(index).setLocation(Window.askString("Introduzca la nueva localizacion"));
         break;
       case "3":
-        Manager.restaurants.get(index).setOpeningHours(Window.askString("Introduzca el horario"));
+        Manager.restaurants.get(index).setHours(Window.askString("Introduzca el horario"));
         break;
       case "4":
-        Manager.restaurants.get(index).setrating(Window.askFloat("Introduzca la nueva calificación"));
+        Manager.restaurants.get(index).setRating(Window.askFloat("Introduzca la nueva calificación"));
         break;
     }
   }
