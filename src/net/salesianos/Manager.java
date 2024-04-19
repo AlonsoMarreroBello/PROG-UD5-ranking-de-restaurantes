@@ -6,7 +6,7 @@ import java.util.Comparator;
 
 import javax.swing.JOptionPane;
 
-class Manager {
+public class Manager {
   private static ArrayList<Restaurant> restaurants = new ArrayList<>();
 
   public static void addRestaurant(Restaurant restaurant) {
